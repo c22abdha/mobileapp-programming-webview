@@ -5,10 +5,12 @@
 First, I renamed the app
 In the second step I copied <uses-permission android:name="android.permission.INTERNET" /> so I can enable internet
 Third, I replaced TextView to Webview.
-Then i added thes command android:id="@+id/my_webview in Activatemain.xml
+Then i added this command android:id="@+id/my_webview in Activatemain.xml
 Then I added this code private WebView myWebView; And this code   myWebView = findViewById(R.id.my_webview);
 myWebView.setWebViewClient(new WebViewClient()); // Do not open in Chrome!
-myWebView.loadUrl("https://his.se"); in MainActivity.java.**
+myWebView.loadUrl("https://his.se"); in MainActivity.java. After this step, I ran my program and saw that I can access the university page.
+thin i enabled Javascript execution in WebViewClient by adding WebSettings webSettings = myWebView.getSettings();
+webSettings.setJavaScriptEnabled(true); .**
 
 _Du kan ta bort all text som finns sedan tidigare_.
 
