@@ -1,7 +1,14 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+**I started by forking the project from GitHub to Android Studio, after that I copied the link, opened the project, and then started doing what was required of me in the task.
+First, I renamed the app
+In the second step I copied <uses-permission android:name="android.permission.INTERNET" /> so I can enable internet
+Third, I replaced TextView to Webview.
+Then i added thes command android:id="@+id/my_webview in Activatemain.xml
+Then I added this code private WebView myWebView; And this code   myWebView = findViewById(R.id.my_webview);
+myWebView.setWebViewClient(new WebViewClient()); // Do not open in Chrome!
+myWebView.loadUrl("https://his.se"); in MainActivity.java.**
 
 _Du kan ta bort all text som finns sedan tidigare_.
 
