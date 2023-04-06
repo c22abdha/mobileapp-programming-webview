@@ -2,50 +2,51 @@
 # Rapport
 
 **I started by forking the project from GitHub to Android Studio, after that I copied the link, opened the project, and then started doing what was required of me in the task.
-First, I renamed the app
-In the second step I copied <uses-permission android:name="android.permission.INTERNET" /> so I can enable internet
-Third, I replaced TextView to Webview.
-Then i added this command android:id="@+id/my_webview in Activatemain.xml
-Then I added this code private WebView myWebView; And this code   myWebView = findViewById(R.id.my_webview);
-myWebView.setWebViewClient(new WebViewClient()); // Do not open in Chrome!
-myWebView.loadUrl("https://his.se"); in MainActivity.java. After this step, I ran my program and saw that I can access the university page.
-thin i enabled Javascript execution in WebViewClient by adding WebSettings webSettings = myWebView.getSettings();
-webSettings.setJavaScriptEnabled(true); .**
+First, I renamed the app to (Abdullahs webviewapp)
+In the second step I copied "<uses-permission android:name="android.permission.INTERNET" />" so I can enable internet.
+Third, I replaced TextView to Webview.android:id="@+id/my_webview in Activaty_main.xml .
+Fifth I added this code private WebView myWebView; myWebView = findViewById(R.id.my_webview); , myWebView.setWebViewClient(new WebViewClient());  , myWebView.loadUrl("https://his.se"); in MainActivity.java.
+then i enabled Javascript execution in WebViewClient by adding WebSettings webSettings = myWebView.getSettings(); , webSettings.setJavaScriptEnabled(true); .
+After this step, I run my program and saw that I can access the university page.
+then i added a HTML page and i Implement External and InternalWebPage.
+myWebView.loadUrl("https://his.se");
+myWebView.loadUrl("file:///android_asset/Abdullah.HTML"); then i call this onOptionsItemSelected in this method.
 
-_Du kan ta bort all text som finns sedan tidigare_.
+**
+````
 
-## Följande grundsyn gäller dugga-svar:
+<string name="app_name">Abdullahs webviewapp</string>
 
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
+````
+````
+android:id="@+id/my_webview"
+````
+````
+<!Doctype html >
+<html>
+<h1>Rubrik</h1>
+<p>Text</p>
 
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
+</html>
+````
+````
+private WebView myWebView;
+        myWebView.loadUrl("https://his.se");
+myWebView.loadUrl("file:///android_asset/Abdullah.HTML");
 
-```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
-```
+        myWebView = findViewById(R.id.my_webview);
+        myWebView.setWebViewClient(new WebViewClient()); // Do not open in Chrome!
+
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        
+        showExternalWebPage();
+        showInternalWebPage();
+````
+
 
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](Screenshot_20230404_123546.png)
 ![](Screenshot_20230404_123905.png)
-Läs gärna:
 
-- Boulos, M.N.K., Warren, J., Gong, J. & Yue, P. (2010) Web GIS in practice VIII: HTML5 and the canvas element for interactive online mapping. International journal of health geographics 9, 14. Shin, Y. &
-- Wunsche, B.C. (2013) A smartphone-based golf simulation exercise game for supporting arthritis patients. 2013 28th International Conference of Image and Vision Computing New Zealand (IVCNZ), IEEE, pp. 459–464.
-- Wohlin, C., Runeson, P., Höst, M., Ohlsson, M.C., Regnell, B., Wesslén, A. (2012) Experimentation in Software Engineering, Berlin, Heidelberg: Springer Berlin Heidelberg.
